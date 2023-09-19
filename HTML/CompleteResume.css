@@ -1,0 +1,44 @@
+#Container{
+	height: 300px;
+	width: 60%;
+/*	width: 50px;*/
+	border: 2px solid blue;
+	overflow-wrap: ;
+	background: radial-gradient(yellow ,red ,blue );
+	display: inline-block;
+}
+
+@media only screen and (min-width:300px){
+
+	#Container{
+		width: 100%;
+	}
+}
+
+#div1{
+	height: 100px;
+	width: 100px;
+	background-color: lightcoral;
+	transition: 1s ease-in-out 0.1s;
+	animation: changeshape 1.8s ease-in-out infinite alternate ;
+/*transition: 1s steps(6,end);*/
+}
+
+@keyframes changeshape{
+	from{
+
+		border-radius: 0%;
+	}
+	to{
+
+		background-color: lightblue;
+		border-radius: 50%;
+	}
+}
+
+#div1:hover {
+	rotate: rotate(60deg);
+
+	height: 200px;
+	width: 200px;
+}

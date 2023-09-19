@@ -1,0 +1,161 @@
+var varibal_name = function function_name(){
+
+}
+
+* can't use function_name to call function
+
+var varibal_name = function (){
+
+}
+
+* without function_name while calling it gives varibal_name.
+
+Varible Housting
+
+    * calling a function before declaration will not make function run insted it will know that the function exist but the function data couldn't find
+
+
+Arrays
+    
+    * var varibal_name = new Arrays( size_of_Arrray(--Optinoal)  );
+    * var varibal_name = [value1,value2, ...];
+    * IF the array size is 3 you give value at pos 5, but at position 4 array shows as empty
+    
+    --Splice
+
+Objects
+
+    * var varibal_name = {}; // this is an empty Objects
+    * var varibal_name = {key:value, key:value, .. } // obj with keys and values
+    * typeof(varibal_name) gives type of var
+    * can access the propertie of object by using objname.property name
+    * trying to access a property which is not avaible it throws "Undefines"
+
+    ** obj in JS are collection of properties
+    ** obj are mutable and provided within {}
+    **  All keys are Strings in propertie
+
+   /** var names= {"name":"chaitu", roll : 15, score: 1563};
+
+        function propertyprint(obj,property){
+             console.log(obj[property]);
+            }
+
+            propertyprint(names,"score");
+
+    **/
+
+    ** var varibal_name = object.getOwnPropertyNames (obj_reference)
+    ** we can use nested objects 
+
+     var parent_obj = {
+        key = value,
+        key2 = value2,
+
+        child_object : {
+            key = value,
+            key2 = value2,
+        }
+    }
+
+    ** can access the above obj by " parent_obj.child_object.propertie "
+
+Arrays -- Loops
+
+setInterval(function_name, milliseconds)
+    ** It taks two parameters function_name and milliseconds to intial as repeate
+ClearInterval(varibal_name)
+    ** It takes a parameter to stop the Interval if it is in repeate mode or in Loops
+    ** var myVar = setInterval(JSfunction, timeInMilliseconds);
+    ** clearInterval(myVar);
+-- To loop or repeate a function is same in as other languages
+Refer the below code
+
+                /** function tik(){
+                console.log("second", sec);
+                    sec--;
+                    if(sec == -1){
+                    clearInterval(id);
+                    }
+                 }
+
+var id = setInterval(tik, 1000); **/
+
+Spread Operator ::
+
+    var susan = {
+        name : "susan",
+        age : 30
+    }
+
+    var raj = {...susan} 
+
+    ** In the above syntax (...) refer as a Spread Operator
+    ** As we  know that object has one memory variable uses the address of memory
+    In the above code name and age has the real memory susan and raj has memory address of that object
+    because we using spread operator to copy susan to raj if we make any changes to raj doesn't effect susan
+
+    ** the above cpoy called as DeepCopy
+    *** we can use object.assign({}, object_name ) // for Deepcopy
+
+
+/*
+    let list = [4, 5, 6];
+for (let i in list) {
+   console.log(i); 
+}
+
+for (let i of list) {
+   console.log(i); 
+}
+*/
+ o/p :: 0 1 2 4 5 6
+Both for..of and for..in statements iterate over the list. The values iterated on are different though, for..in returns a list of keys on the object being iterated, whereas for..of returns a list of values of the numeric properties of the object being iterated.
+
+
+---------- DOM -------------
+
+    Document object model
+    * DOM serves as API
+    document.getElementID, .....
+    'click', 'mouseover', 'mouseon', ....
+    "Strict" --- mode
+    
+----------------------------
+Const:
+
+**Const can't be changed
+
+const c = 40;
+
+ ** c can't be modified;
+ ** Const variable are readonly variable
+ ** can't use them before declaration
+
+ ---------------------------
+ Let:
+ * Declaring a variable as 'Let' will available to that scope only ("Bloc");
+ * 
+
+Diff b/w let and var
+
+* Varible declared with var have global scope, whereas variable declared with let have block scope. 
+* variable declared with let are defined only within the block.
+
+
+for(let i=1; i<=5; i++){
+    setTimeout(function(){
+         console.log(i);                                                    
+    },1000);
+};
+
+for(var i=1; i<=5; i++){
+    setTimeout(function(){
+        console.log(i);
+    },1000);
+};
+
+------------------------
+for Of
+
+* For of is same as for loop

@@ -1,0 +1,40 @@
+#div1{
+	height: 150px;
+	width: 150px;
+	background-color: blue;
+	border-style: solid;
+	border-radius: 20px;
+	padding: 2%;
+}
+	
+
+#inner-div1{
+
+	height: 50px;
+	width: 50px;
+	background-color: lightgreen;
+	margin: 15px 15px 20 px;
+	padding: 5px;
+	visibility: hidden;
+/*	column-fill: revert-layer;*/
+}
+
+
+#div2{
+	height: 200px;
+	width: 300px;
+	background-color: yellow;
+	margin: auto;
+/*	margin-top: -50px;*/
+}
+/*	three types to make content to different color*/
+
+p{
+	viewport-fit: 50px;
+	display: inline-block;
+	color: rgba(255, 0, 0,1);
+}
+
+.test1{
+	border-style:dotted;
+}

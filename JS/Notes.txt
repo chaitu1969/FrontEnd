@@ -1,0 +1,342 @@
+var varibal_name = function function_name(){
+
+}
+
+* can't use function_name to call function
+
+var varibal_name = function (){
+
+}
+
+* without function_name while calling it gives varibal_name.
+
+Varible Housting
+
+    * calling a function before declaration will not make function run insted it will know that the function exist but the function data couldn't find
+
+
+Arrays
+    
+    * var varibal_name = new Arrays( size_of_Arrray(--Optinoal)  );
+    * var varibal_name = [value1,value2, ...];
+    * IF the array size is 3 you give value at pos 5, but at position 4 array shows as empty
+    
+    --Splice
+
+Objects
+
+    * var varibal_name = {}; // this is an empty Objects
+    * var varibal_name = {key:value, key:value, .. } // obj with keys and values
+    * typeof(varibal_name) gives type of var
+    * can access the propertie of object by using objname.property name
+    * trying to access a property which is not avaible it throws "Undefines"
+
+    ** obj in JS are collection of properties
+    ** obj are mutable and provided within {}
+    **  All keys are Strings in propertie
+
+   /** var names= {"name":"chaitu", roll : 15, score: 1563};
+
+        function propertyprint(obj,property){
+             console.log(obj[property]);
+            }
+
+            propertyprint(names,"score");
+
+    **/
+
+    ** var varibal_name = object.getOwnPropertyNames (obj_reference)
+    ** we can use nested objects 
+
+     var parent_obj = {
+        key = value,
+        key2 = value2,
+
+        child_object : {
+            key = value,
+            key2 = value2,
+        }
+    }
+
+    ** can access the above obj by " parent_obj.child_object.propertie "
+
+Arrays -- Loops
+
+setInterval(function_name, milliseconds)
+    ** It taks two parameters function_name and milliseconds to intial as repeate
+ClearInterval(varibal_name)
+    ** It takes a parameter to stop the Interval if it is in repeate mode or in Loops
+    ** var myVar = setInterval(JSfunction, timeInMilliseconds);
+    ** clearInterval(myVar);
+-- To loop or repeate a function is same in as other languages
+Refer the below code
+
+                /** function tik(){
+                console.log("second", sec);
+                    sec--;
+                    if(sec == -1){
+                    clearInterval(id);
+                    }
+                 }
+
+var id = setInterval(tik, 1000); **/
+
+Spread Operator ::
+
+    var susan = {
+        name : "susan",
+        age : 30
+    }
+
+    var raj = {...susan} 
+
+    ** In the above syntax (...) refer as a Spread Operator
+    ** As we  know that object has one memory variable uses the address of memory
+    In the above code name and age has the real memory susan and raj has memory address of that object
+    because we using spread operator to copy susan to raj if we make any changes to raj doesn't effect susan
+
+    ** the above cpoy called as DeepCopy
+    *** we can use object.assign({}, object_name ) // for Deepcopy
+
+
+/*
+    let list = [4, 5, 6];
+for (let i in list) {
+   console.log(i); 
+}
+
+for (let i of list) {
+   console.log(i); 
+}
+*/
+ o/p :: 0 1 2 4 5 6
+Both for..of and for..in statements iterate over the list. The values iterated on are different though, for..in returns a list of keys on the object being iterated, whereas for..of returns a list of values of the numeric properties of the object being iterated.
+
+
+---------- DOM -------------
+
+    Document object model
+    * DOM serves as API
+    document.getElementID, .....
+    'click', 'mouseover', 'mouseon', ....
+    "Strict" --- mode
+    
+----------------------------
+Const:
+
+**Const can't be changed
+
+const c = 40;
+
+ ** c can't be modified;
+ ** Const variable are readonly variable
+ ** can't use them before declaration
+
+ ---------------------------
+ Let:
+ * Declaring a variable as 'Let' will available to that scope only ("Bloc");
+ * 
+
+Diff b/w let and var
+
+* Varible declared with var have global scope, whereas variable declared with let have block scope. 
+* variable declared with let are defined only within the block.
+
+
+for(let i=1; i<=5; i++){
+    setTimeout(function(){
+         console.log(i);                                                    
+    },1000);
+};
+
+for(var i=1; i<=5; i++){
+    setTimeout(function(){
+        console.log(i);
+    },1000);
+};
+
+------------------------
+For Of
+* For of is same as for loop
+-------------------------
+Smooth scrole
+window.scrollTo(X,Y)
+window.scrole
+window.pageYoffSet() ----- To check where are we
+window.scrollBy(para1,para2) ---------
+window.scrollBy()  :: scroll for present position to specified postition
+                   :: Using repeadly moves from that position to specified number of timeInMilliseconds
+w
+
+-------------------------
+Clousers
+
+Let -- scope to block, Statement
+Var -- scope to globally
+
+Advanced JS Concepts
+
+ * IIFE : Immediatly invoke function expression
+   -- (function())();
+   -- define a function with in () and call Immediatly after the function using " (); "
+
+   ** var a = (function(){
+       return typeof arguments;
+      })();
+      console.log(a);
+    
+    ** Sol ::  Explanation: ‘arguments’ is an inbuilt object in javascript which is accessible only inside functions. It contains information about the arguments passed to the function.
+
+Clousers
+    * function to lexical environment in which function was created
+    * outer() -> inner() then inner function has access to outer function, can access the inner function globally because of Clousers
+    * inner function has reference to outer function 
+        outer(){
+            inner(){
+
+            }
+        }
+    * calling inner two times each time inner memory is created
+    * 
+
+Arrow functions
+
+ - var multi = (x,y) => x * y;
+ -- var multi = function(x,y) {
+    return x*y;
+ }
+
+ * the above two functions are same the arrow function makes things simpler
+ * arrow fucntion always picks the value frome global function
+        var func = ( a,b,c ) => (1);
+            is allowed
+            
+-- An unbound function is a function that is not bound to an object
+
+THIS Keyword
+    four ways calling function in JS
+    
+    Way(1) * 
+            function(){
+                console.log(this);
+            }
+            new fucntion();
+
+             Steps gng throught backend * new creates a empty obj
+                                        * empty object is linked to function
+                                        * function is linked to this obj
+                                        * function return obj
+    
+    way(2) * Explicit Binding rule
+           * Hard Binding
+
+           var raj = {
+            name :"raj",
+            greet : function(){
+                console.log('Hello',this);
+            }
+           };
+
+           * calling raj object this refere to window object(globally)
+           * calling greet function using raj obj this and unsing bind function this refer local object like below
+           -> raj.greet.bind(raj);
+               
+    way(3) * Implicit function
+
+            -> raj.greet()
+            * In above greet function is called using raj object
+        
+    way(4) * Default binding rule
+
+            -> function ask(){
+                console.log(this,this.name)
+            }            
+            ask();
+
+            o/p : windows obj
+    
+Calling multiple object with same usage
+
+    * function function_name(para1,para2){
+        var objname = {
+            objname.para1=para1,
+            objname.para2=para2,
+        }    
+        return objname;
+    }
+
+    var variable = function_name(val1,val2);
+    var variable2 = function_name(val1,val2);
+
+    * We can modify the above function 
+
+    function function_name(para1,para2){
+        this.para1=para1,
+        this.para2=para2,
+    }
+
+    var variable = new function_name(val1,val2);
+    var variable2 = new function_name(val1, val2);
+
+    Prototypes
+    ----------
+    function_name.Prototypes
+    * JS will create two objects for function 1)function obj and 2) protoype obj
+    * function.Prototype.constructor will get back to function
+    * creating multiple obj will use protoype insted of function
+    * Javascript creates a function prototype for any function that you create. Although the prototype created becomes useful when we use the function as a constructor, it is created for all the functions. 
+    * Whenever a function is created, a SINGLE copy of the associated function prototype is created too. All the objects created using this constructor function share the same function prototype. A new prototype is NOT created for every instance of the object.
+    *
+    function function_name(para1,para2){
+        this.para1=para1,
+        this.para2=para2,
+        this.getprice = function(){
+            return this.price;
+        }
+    }
+
+    * creating multipe obj for function v1 , v2 , .... calling getprice for each obj will create memory for each obj
+    * insted of creating memory for each obj we will use prototype
+
+    function function_name(para1,para2){
+        this.para1=para1,
+        this.para2=para2,
+    }
+    function_name.protype.getprice = fucntion(){
+        return this.price;
+    }
+
+    * creating obj for function will not have getprice function
+    * for accessing getprice we have to use function_name.Prototype.getprice;
+
+Objects
+------------------------
+* : Every function has a property called ‘name’. By default, the value of ‘name’ is set to the function's name.
+
+* obj and Object() both are different
+
+*  Every function has a property called ‘name’. By default, the value of ‘name’ is set to the function's name. At the back, the class is converted into a function only. Hence the ‘name’ property takes up the value of the class name. The class syntax is just syntactical sugar over conventional function prototypes.
+
+Promises
+-----------------------
+Pending stages
+Fulfill stages
+Regected stages
+
+
+
+-----------------------
+setTimeout
+ * its provided by browser API
+ * setTimeout will start the timer in the browser
+ * It is a part of the webAPI provided by the browser.
+Event Loops
+ * constantly look for call stack and task queueu
+ * constantly checking is call stack isempty if and only if call stack is empty setTimeout function which is placed in task queue will be placed in call stack then it will execute
+ * Event loop gives priority micro task queue over task queue
+
+SPA VS MPA
+ * https://dev.to/mquanit/single-page-application-vs-multi-page-application-p2m
+
+API's
+-------------------

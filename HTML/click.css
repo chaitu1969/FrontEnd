@@ -1,0 +1,17 @@
+#div1{
+	margin: 50px;
+	padding: 50px;
+	height: 200px;
+	width: 200px;
+	text-align: center;
+	position: static;
+	justify-content: center;
+	background-color: lightblue;
+}
+
+#div2{
+	height: 50%;
+	width: 50%;
+	background-color: red;
+	justify-content: center;
+}

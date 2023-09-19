@@ -1,0 +1,36 @@
+#Container{
+	height: 400px;
+	width: auto;
+	background-color: lightskyblue;
+	display: flex;
+	flex-direction: column;
+	border-spacing: 20px;
+	flex-wrap: wrap;
+	flex
+
+}
+
+#container div{
+	height: 100px;
+	width: 100px;
+}
+
+#div1{
+	background-color: lightgrey;
+}
+
+#div2{
+	background-color: lightgreen;
+}
+
+#div3{
+	background-color: yellowgreen;
+}
+
+#div4{
+	background-color: darkcyan;
+}
+
+#div5{
+	background-color: lightcoral;
+}
